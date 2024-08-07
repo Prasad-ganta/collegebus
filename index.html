@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bus Management System</h1>
+        <div id="loginContainer">
+            <h2>Admin Login</h2>
+            <input type="password" id="adminPassword" placeholder="Enter Admin Password">
+            <button onclick="adminLogin()">Login</button>
+        </div>
+        <div id="adminContainer" style="display:none;">
+            <h2>Admin Panel</h2>
+            <div class="actions">
+                <input type="text" id="busInput" placeholder="Enter Bus Name">
+                <button onclick="displayBusDetails()">View Bus Details</button>
+                <button onclick="showAddBusForm()">Add New Bus</button>
+                <button onclick="showAddStudentForm()">Add New Student</button>
+                <button onclick="showChangePasswordForm()">Change Admin Password</button>
+                <button onclick="showSearchStudentForm()">Search Student</button>
+            </div>
+            <div id="busDetails"></div>
+        </div>
+        <div id="formContainer" style="display:none;">
+            <div id="addBusForm" style="display:none;">
+                <h2>Add New Bus</h2>
+                <input type="text" id="newBusName" placeholder="Bus Name">
+                <button onclick="addBus()">Add Bus</button>
+            </div>
+            <div id="addStudentForm" style="display:none;">
+                <h2>Add New Student</h2>
+                <input type="text" id="studentBusName" placeholder="Bus Name">
+                <input type="text" id="studentId" placeholder="Student ID">
+                <input type="text" id="studentName" placeholder="Student Name">
+                <input type="text" id="studentDepartment" placeholder="Department">
+                <input type="text" id="studentYear" placeholder="Year of Study">
+                <input type="number" id="feesTotal" placeholder="Total Fees">
+                <input type="number" id="feesPaid" placeholder="Fees Paid">
+                <button onclick="addStudent()">Add Student</button>
+            </div>
+            <div id="changePasswordForm" style="display:none;">
+                <h2>Change Admin Password</h2>
+                <input type="password" id="currentPassword" placeholder="Current Password">
+                <input type="password" id="newPassword" placeholder="New Password">
+                <button onclick="changeAdminPassword()">Change Password</button>
+            </div>
+            <div id="searchStudentForm" style="display:none;">
+                <h2>Search Student</h2>
+                <input type="text" id="searchStudentId" placeholder="Student ID">
+                <button onclick="searchStudent()">Search</button>
+            </div>
+        </div>
+        <div id="searchResult"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
